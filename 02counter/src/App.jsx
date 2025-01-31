@@ -13,8 +13,18 @@ const addValue = () => {
 
   // counter = counter+1 ;   (aese to update ni horha toh .. aap us method ka nam dijie or update krlijie)
 
-  setCounter(counter+1)
-  console.log("Clicked" , counter);
+  // setCounter(counter+1)
+  // setCounter(counter+1)
+  // setCounter(counter+1)
+  // setCounter(counter+1)
+  // give answer by increasing 1 only ;;;; 
+
+
+  setCounter( prevCounter => prevCounter+1)
+  setCounter( prevCounter => prevCounter+1)
+  setCounter( prevCounter => prevCounter+1)
+  setCounter( prevCounter => prevCounter+1)
+// it will inccrease value by 4 
   
 }
 
