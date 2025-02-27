@@ -1,3 +1,4 @@
+// seperate folder m full code h 
 import { useState } from 'react'
 
 import './App.css'
