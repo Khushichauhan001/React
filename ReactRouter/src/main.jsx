@@ -8,6 +8,7 @@ import About from './Components/AboutUs/AboutUs.jsx'
 import Home from './Components/Home/Home.jsx'
 import Contact from './Components/Contact/Contact.jsx'
 import User from './Components/User/User.jsx'
+import Github, {githubInfoLoader} from './Components/Github/Github.jsx'
 
 //creating own router 
 //1ST WAY 
@@ -21,14 +22,14 @@ import User from './Components/User/User.jsx'
 //         element: <Home/>
 //       } ,
 //       {
-//         path: "about",
+//         path: "about",     // / to already lga hua h path m toh islie yha ni lga rhe h 
 //         element: <About/>
 
 //       },
 //       {
 //         path: "contact",
 //         element: <Contact/>
-//       },
+//       }, 
 //     ]
 //   }
 // ])
@@ -38,12 +39,15 @@ import User from './Components/User/User.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path='/' element={<Layout/>}>
-    <Route path='' element={<Home/>}/>
-    <Route path='about' element={<About/>}/>
-    <Route path='contact' element={<Contact/>}/>
-    <Route path='user/:userid' element={<User/>}/>
-    <Route path='github' element={<Github/>} />
+    <Route path='/' element={<Layout/>}>    
+     <Route path='' element={<Home/>}/>
+     <Route path='about' element={<About/>}/>
+     <Route path='contact' element={<Contact/>}/>
+     <Route path='user/:userid' element={<User/>}/>
+     <Route 
+     loader={githubInfoLoader}
+     path='github'
+      element={<Github/>}/>
     </Route>
   )
 )
@@ -54,5 +58,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   </React.StrictMode>,
 )
 
-
-// video upto 44:00 min only code baki sirf dekha h 
